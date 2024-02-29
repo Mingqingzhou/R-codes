@@ -52,7 +52,7 @@ for (i in folders ) {
           
           dat1 <- harmonise_data(exposure_dat=loneliness_exp_dat, outcome_dat=outcome_exp_dat1)#
           
-          res0<- generate_odds_ratios(mr_res = mr(dat1,method_list = c("mr_ivw_mre","mr_ivw","mr_weighted_median","mr_weighted_mode")))
+          res0<- generate_odds_ratios(mr_res = mr(dat1,method_list = c("mr_ivw_mre","mr_ivw","mr_weighted_median","mr_egger_regression ")))
           
           MRoutcome0 <- data.frame("method"=res0$method,"nsnp"=res0$nsnp,"OR"=res0$or,"CI_low"=res0$or_lci95,
                                    "CI_up"=res0$or_uci95,"P"=res0$pval,"outcome"=basename (i),"exposure"="loneliness")
@@ -106,7 +106,7 @@ for (i in folders ) {
           
           dat1 <- harmonise_data(exposure_dat=loneliness_exp_dat, outcome_dat=outcome_exp_dat1)#
           
-          res0<- generate_odds_ratios(mr_res = mr(dat1,method_list = c("mr_ivw_mre","mr_ivw","mr_weighted_median","mr_weighted_mode")))
+          res0<- generate_odds_ratios(mr_res = mr(dat1,method_list = c("mr_ivw_mre","mr_ivw","mr_weighted_median","mr_egger_regression ")))
           
           MRoutcome0 <- data.frame("method"=res0$method,"nsnp"=res0$nsnp,"OR"=res0$or,"CI_low"=res0$or_lci95,
                                    "CI_up"=res0$or_uci95,"P"=res0$pval,"outcome"=basename (i),"exposure"="loneliness")
@@ -133,7 +133,7 @@ for (i in folders ) {
           names(presso)[1] <- basename (i)
           presso_result <- c(presso_result, presso)
           }, error = function(e) {
-              cat("出错了:", conditionMessage(e), "\n")
+              cat("error:", conditionMessage(e), "\n")
               error_folders <<- c(error_folders, basename(i))
               
           })
@@ -161,7 +161,7 @@ for (i in folders ) {
           
           dat1 <- harmonise_data(exposure_dat=loneliness_exp_dat, outcome_dat=outcome_exp_dat1)#
           
-          res0<- generate_odds_ratios(mr_res = mr(dat1,method_list = c("mr_ivw_mre","mr_ivw","mr_weighted_median","mr_weighted_mode")))
+          res0<- generate_odds_ratios(mr_res = mr(dat1,method_list = c("mr_ivw_mre","mr_ivw","mr_weighted_median","mr_egger_regression ")))
           
           MRoutcome0 <- data.frame("method"=res0$method,"nsnp"=res0$nsnp,"OR"=res0$or,"CI_low"=res0$or_lci95,
                                    "CI_up"=res0$or_uci95,"P"=res0$pval,"outcome"=basename (i),"exposure"="loneliness")
@@ -214,7 +214,7 @@ for (i in folders ) {
           
           dat1 <- harmonise_data(exposure_dat=loneliness_exp_dat, outcome_dat=outcome_exp_dat1)#
           
-          res0<- generate_odds_ratios(mr_res = mr(dat1,method_list = c("mr_ivw_mre","mr_ivw","mr_weighted_median","mr_weighted_mode")))
+          res0<- generate_odds_ratios(mr_res = mr(dat1,method_list = c("mr_ivw_mre","mr_ivw","mr_weighted_median","mr_egger_regression ")))
           
           MRoutcome0 <- data.frame("method"=res0$method,"nsnp"=res0$nsnp,"OR"=res0$or,"CI_low"=res0$or_lci95,
                                    "CI_up"=res0$or_uci95,"P"=res0$pval,"outcome"=basename (i),"exposure"="loneliness")
@@ -268,7 +268,7 @@ for (i in folders ) {
               
               dat1 <- harmonise_data(exposure_dat=loneliness_exp_dat, outcome_dat=outcome_exp_dat1)#
               
-              res0<- generate_odds_ratios(mr_res = mr(dat1,method_list = c("mr_ivw_mre","mr_ivw","mr_weighted_median","mr_weighted_mode")))
+              res0<- generate_odds_ratios(mr_res = mr(dat1,method_list = c("mr_ivw_mre","mr_ivw","mr_weighted_median","mr_egger_regression ")))
               
               MRoutcome0 <- data.frame("method"=res0$method,"nsnp"=res0$nsnp,"OR"=res0$or,"CI_low"=res0$or_lci95,
                                        "CI_up"=res0$or_uci95,"P"=res0$pval,"outcome"=basename (i),"exposure"="loneliness")
@@ -322,7 +322,7 @@ for (i in folders ) {
               
               dat1 <- harmonise_data(exposure_dat=loneliness_exp_dat, outcome_dat=outcome_exp_dat1)#
               
-              res0<- generate_odds_ratios(mr_res = mr(dat1,method_list = c("mr_ivw_mre","mr_ivw","mr_weighted_median","mr_weighted_mode")))
+              res0<- generate_odds_ratios(mr_res = mr(dat1,method_list = c("mr_ivw_mre","mr_ivw","mr_weighted_median","mr_egger_regression ")))
               
               MRoutcome0 <- data.frame("method"=res0$method,"nsnp"=res0$nsnp,"OR"=res0$or,"CI_low"=res0$or_lci95,
                                        "CI_up"=res0$or_uci95,"P"=res0$pval,"outcome"=basename (i),"exposure"="loneliness")
